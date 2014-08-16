@@ -13,29 +13,66 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover; 
 }
+#profile{
+    animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
 
+    animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+
+
+    -vendor-animation-iteration-count: infinite;   
+}
+#name {
+    animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+
+    animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+
+    -vendor-animation-iteration-count: infinite;
+}
+#info{
+    animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+
+    animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+
+    -vendor-animation-iteration-count: infinite;   
+}
 .text-vertical-center {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-.text-vertical-center h1 {
+.header h1 {
     margin: 0;
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
     color: white;
 }
-.text-vertical-center h3 {
-    margin: 0;
-    padding: 0;
-    
+.header h3 {
     font-weight: 700;
     color: white;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.top-padding{
+    margin-top: 7%;
 }

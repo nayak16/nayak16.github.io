@@ -8,8 +8,12 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+   
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
     <!-- Custom Style Sheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,19 +23,52 @@
     <![endif]-->
   </head>
   <body>
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Aatish Nayak</h1>
-            <h3>Programmer &middot Student &middot Adventurer</h3>
-            <br>
-            
-        </div>
-    </header>
+    <div id="fullpage">
+      <div class="section">
+          <header id="top" class="header">
+            <div class="container">
+              <div class="row">
+                <div class="top-padding"></div>
+                <img id="profile" class="col-centered col-md-3 img-circle img-responsive animated fadeIn" src="img/composite.jpg"></img>
+              </div>
+              <div class="row">
+                <div class="col-centered col-md-6">
+                  <h1 id="name" class="animated text-center fadeIn">Aatish Nayak</h1>
+                  <h3 id="info" class="text-center animated fadeIn">Programmer &middot Student &middot Adventurer</h3>
+                  <br>
+                </div>  
+              </div>
+            </div>
+
+
+            <div class="text-vertical-center">
+             
+            </div>
+          </header>
+      </div>
+        
+
+      
+
+    </div>
     
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <!-- This following line is needed in case of using the default easing option or when using another
+          one rather than "linear" or "swing". You can also add the full jQuery UI instead of this file if you prefer -->
+    <script src="vendors/jquery.easings.min.js"></script>
+    <!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
+    <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Full Page Initilization -->
+    <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage();
+    });
+
+    </script>
   </body>
 </html>
