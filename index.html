@@ -48,10 +48,23 @@
           </header>
       </div>
       <div class="section">
-         <div class="slide"> Slide 1 </div>
+         <div id="" class="slide"> 
+            <div class="container">
+              <div class="row">
+                 <div class="col-centered col-md-3 col-xs-3"><img id="peacock" class="img-responsive hide" src="img/peacock.png"></img></div>
+              </div>
+              <div class="row">
+                <div class="col-centered col-md-8 project1">
+                  <h1 class="text-center">South Asian Student Association Website</h1>
+                  <h4 class="text-center">As Webmaster, I created and currently maintain the CMU SASA <a href="www.mayursasa.com">Website</a></h4>
+                </div>
+              </div>
+            </div>
+         </div>
          <div class="slide"> Slide 2 </div>
          <div class="slide"> Slide 3 </div>
          <div class="slide"> Slide 4 </div>
+
       </div>
         
 
@@ -74,7 +87,16 @@
     <script>
     $(document).ready(function() {
         $('#fullpage').fullpage({
-          anchors: ['firstSection','secondSection']
+          anchors: ['firstSection','secondSection'],
+          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+
+            //first slide of the second section
+            if(anchorLink == 'secondSection' && slideIndex == 0){
+                $('#peacock').removeClass('hide');
+                $('#peacock').addClass("animated bounceIn reveal");
+                
+            }
+         }
 
 
         });
