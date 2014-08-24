@@ -878,7 +878,6 @@ a:focus,
     width:100%;
     border:none;
     border-radius:0;
-    box-shadow:none;
     background-color:#fff;
 }
 
@@ -886,8 +885,8 @@ a:focus,
     width:100%;
     margin:0;
     padding:0;
-    padding-top:40px;
-    background:#36D9C3;
+    padding-top:10px;
+    background: black;
     color:#fff;
     border:none;
     text-align:center;
@@ -906,6 +905,7 @@ a:focus,
     margin-bottom:30px;
     opacity:1;
     color:inherit;
+    right: 2%;
     text-shadow:none;
     -webkit-transition:all 0.2s ease-out;
     transition:all 0.2s ease-out;
@@ -917,7 +917,7 @@ a:focus,
 
 .modal-body {
     margin:0;
-    padding:60px 0 20px;
+    padding:60px 0 0px;
 }
 
 .modal-body .project-descr{
@@ -977,7 +977,7 @@ a:focus,
 #sdbr-category:before {
 	display: inline-block;
 	width:20px;
-    content:"\f115";
+    content:"\f016";
     font-family:"Fontawesome";
     margin-right:10px;
 }
@@ -993,7 +993,7 @@ a:focus,
 #sdbr-client:before {
 	display: inline-block;
 	width:20px;
-    content:"\f007";
+    content:"\f0f7";
     font-family:"Fontawesome";
     margin-right:10px;
 }
