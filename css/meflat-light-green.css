@@ -4,7 +4,7 @@
 body{
 	font-family: 'Titillium Web', sans-serif;
 	font-size:18px;
-	color:#3a3c4a;
+	color:#1a2634`;
 	font-weight:300;
 	overflow-x:hidden;
 }
@@ -45,13 +45,13 @@ a:focus {
 }
 
 a {
-  color:#36D9C3;
+  color:#203e5f;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color:#36D9C3;
+  color:#62778f;
   text-decoration: underline;
 }
 
@@ -72,7 +72,7 @@ a:focus,
 }
 
 .primary {
-	color:#36D9C3;
+	color:#eec550;
 }
 
 /*----------------------
@@ -124,7 +124,7 @@ a:focus,
 	height:52px;
 	outline: none;
 	position: relative;
-	background: #36D9C3;
+	background: #eec550;
 	color: #fff;
 	box-shadow: none;
 	border-radius: 52px;
@@ -179,7 +179,7 @@ a:focus,
 }
 
 .color-bg{
-    background:#36D9C3;
+    background:#eec550;
 }
 
 .dark-bg{
@@ -369,7 +369,7 @@ a:focus,
 ------------------------*/
 
 .jumbotron {
-    background: url(../assets/bg1.jpg) no-repeat center center fixed;
+    background: url(../assets/bg.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
     color:#fff;
     padding:0;
@@ -459,7 +459,7 @@ a:focus,
 
 .flex-direction-nav .flex-prev,
 .flex-direction-nav .flex-next{
-    background:#36D9C3;
+    background:#eec550;
     background-image:none;
     display:inline;
     text-indent:0;
@@ -538,8 +538,26 @@ a:focus,
 #gear{
     width: 46%;
 }
+#moneypls {
+    width: 50%;
+}
 .leap{
     width: 74%;
+}
+#pond{
+    margin-top: -25%;
+    width: 55%;
+}
+
+.moneypls-desc{
+    padding-top: 4%;
+}
+.pond-desc{
+    padding-bottom: 20%;
+}
+
+.first-row {
+    height: 300%;
 }
 /*----------------------
 -----Featured Project----
@@ -593,6 +611,7 @@ a:focus,
 }
 
 #about img{
+    width: 80%;
     margin-bottom:40px;
 	border:0px solid transparent;
 	box-shadow: 15px 3px 10px rgba(0,0,0,.3);
@@ -717,7 +736,7 @@ a:focus,
     position:relative;
     margin:0;
     width:320px;
-	margin-bottom:25px;
+	margin-bottom:50px;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
@@ -785,7 +804,7 @@ a:focus,
 }
 
 .project-item .hover-mask p {
-    color:#36D9C3;
+    color: #eec550;
     margin:0;
     font-size:16px;
     line-height:24px;
@@ -1018,7 +1037,7 @@ a:focus,
 .dribbble-button a{
     display:block;
     color:#fff;
-    background:#36D9C3;
+    background:#eec550;
     text-decoration:none;
     padding:25px 0;
     -webkit-transition:background .3s ease-out;
@@ -1051,6 +1070,20 @@ a:focus,
     opacity:.6;
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
+}
+
+/** PErsonal **/
+#personal {
+    background: url(../assets/roadtrip.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    color:#fff;
+    padding:0;
+    margin-bottom:0;
+    padding:180px 0 80px;
+    overflow:hidden;
+}
+#personal p {
+    font-size: 150%;
 }
 /*----------------------
 -----Contact Styles-----
@@ -1132,7 +1165,7 @@ a:focus,
     width:100%;
     font-size:16px;
     text-align:center;
-    color:#36D9C3;
+    color:#eec550;
 }
 
 #contact-form .field-wrap .control-label{
@@ -1364,7 +1397,7 @@ a:focus,
 
 	#main-nav .nav .active a,
 	#main-nav .nav a:hover{
-        color:#36D9C3; 
+        color:#eec550; 
     }
     
     .jumbotron .text-col{
