@@ -15,7 +15,8 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: new google.maps.LatLng(40.4435, -79.9435),
-    mapTypeId: 'roadmap'
+    mapTypeId: 'roadmap',
+    gestureHandling: 'greedy'
   });
 
   var contentString = `
@@ -37,7 +38,7 @@ function initMap() {
       icon: iconBase + 'bike.png'
     }
   };
-
+  var infowindows = []
   function addMarker(feature) {
     var marker = new google.maps.Marker({
       position: feature.position,
@@ -48,7 +49,13 @@ function initMap() {
     var infowindow = new google.maps.InfoWindow({
       content: formatted
     });
+
     marker.addListener('click', function() {
+      for (var i = 0; i < infowindows.length; i++) {
+        infowindows[i].close()
+      }
+      infowindows = []
+      infowindows.push(infowindow);
       infowindow.open(map, marker);
     });
   }

@@ -1,7 +1,7 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 72%;
+  height: 75%;
   width: 100%
 }
 /* Optional: Makes the sample page fill the window. */
@@ -9,7 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #E5EEC3;
+  /*background-color: #E5EEC3;*/
   font-family: 'Open Sans Condensed', sans-serif;
 }
 .nav-wrapper {
@@ -28,7 +28,7 @@ html, body {
   height: 67%;
 }
 
-.card .card-action {
+.card-action {
   padding-top: 0px;
   padding-bottom: 2px;
 }
