@@ -1,4 +1,16 @@
 var map;
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
@@ -6,16 +18,23 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
+  var contentString = `
+<div id="content" class="infowindow">
+  <div class="row" style="margin-bottom: 0px">
+    <h5 id="firstHeading" class="col s12">{0}</h5>
+  </div>
+  <div class="row" style="margin-bottom: 0px">
+    <p class="col s12">{1}/{2} racks are free</p>
+  </div>
+</div>
+  `;
+
+  
+
   var iconBase = 'assets/parking/';
   var icons = {
     parking: {
       icon: iconBase + 'bike.png'
-    },
-    library: {
-      icon: iconBase + 'library_maps.png'
-    },
-    info: {
-      icon: iconBase + 'info-i_maps.png'
     }
   };
 
@@ -25,33 +44,43 @@ function initMap() {
       icon: icons[feature.type].icon,
       map: map
     });
+    formatted = contentString.format(feature.name, feature.num_free,feature.total)
+    var infowindow = new google.maps.InfoWindow({
+      content: formatted
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
   }
-
+  
   var features = [
     {
-      position: new google.maps.LatLng(40.442317, -79.943801),
+      position: new google.maps.LatLng(40.442181, -79.943771),
+      name: "Doherty Hall",
+      num_free: 3,
+      total: 5,
       type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+    },
+    {
+      position: new google.maps.LatLng(40.442303, -79.945986),
+      name: "Wean Hall",
+      num_free: 0,
+      total: 7,
       type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+    },
+    {
+      position: new google.maps.LatLng(40.441936, -79.942172),
+      name: "Tennis Courts",
+      num_free: 2,
+      total: 6,
       type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
+    },
+    {
+      position: new google.maps.LatLng(40.442838, -79.942389),
+      name: "W",
+      num_free: 0,
+      total: 8,
       type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-      type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-      type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-      type: 'parking'
-    }, {
-      position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
-      type: 'library'
     }
   ];
 
