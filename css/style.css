@@ -24,9 +24,19 @@ body {
   display: none;
 }
 
+/* ------- Snapcode Modal ------ */
+.snapcode {
+  width: 100%;
+}
+#snapchat .modal-content  {
+    -webkit-border-radius: 5.3rem !important;
+    -moz-border-radius: 5.3rem !important;
+    border-radius: 5.3rem !important;
+}
+
 /* ----------- List Sizing ------ */
 .list-header {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .social-icons {
@@ -91,6 +101,11 @@ body {
 
 .fa-linkedin {
   background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #000000;
   color: white;
 }
 
