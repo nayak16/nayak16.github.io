@@ -19,7 +19,7 @@
 		<link href="css/style.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-		<link href="css/open-iconic-bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 
     <style>
       body {
@@ -32,6 +32,9 @@
       }
 
     </style>
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/libs/bootstrap.min.js"></script>
 
   </head>
 
@@ -42,53 +45,59 @@
       <div class="row align-items-center mt-5 justify-content-center">
         <div class="col-lg-5">
           <h1 id="typed-name" class="mt-5"></h1>
-          <p class=""><span class="oi oi-map-marker align-middle" title="map-marker" aria-hidden="true"></span>&nbsp;Los Angeles, CA</p>
+          <p class=""><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Los Angeles, CA</p>
 					<hr>
           <ul class="list-unstyled">
-            <li class="list-header">
-							<h5><span class="oi oi-monitor align-middle"></span>&nbsp;Learn</h5>
+            <li class="list-header fadein">
+							<h5><i class="fa fa-laptop" aria-hidden="true"></i>&nbsp;Learn</h5>
 							<ul class="list-unstyled">
 								<li>Currently, Software Engineer at
-									<a href="http://skurt.com" target="_blank" class="skurt-color badge badge-pill badge-info">Skurt</a>
+									<a href="http://skurt.com" target="_blank" class="skurt-color badge badge-pill">Skurt</a>
 								</li>
 								<li>
 									Previously, Software Engineer Intern at
-									<a href="https://uber.com/india-growth" target="_blank" class="uber-color badge badge-pill badge-info">Uber</a>,
+									<a href="https://uber.com/india-growth" target="_blank" class="uber-color badge badge-pill">Uber</a>,
 								</li>
 								<li>
 									Project Lead at
-									<a href="http://www.autolabproject.com/" target="_blank" class="autolab-color badge badge-pill badge-info">Autolab</a>,
+									<a href="http://www.autolabproject.com/" target="_blank" class="autolab-color badge badge-pill">Autolab</a>,
 								</li>
 								<li>and ECE/CS Class of 2017 at
-									<a href="https://uber.com/india-growth" target="_blank" class="cmu-color badge badge-pill badge-info">Carnegie Mellon</a>
+									<a href="https://cmu.edu" target="_blank" class="cmu-color badge badge-pill">Carnegie Mellon</a>
 								</li>
 							</ul>
 						</li>
-						<li class="list-header">
-							<h5><span class="oi oi-book align-middle"></span>&nbsp;Read</h5>
+						<li class="list-header fadein">
+							<h5><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Read</h5>
 							<ul class="list-unstyled">
 								<li>
 									Sapiens
-									<a href="https://www.amazon.com/dp/B00ICN066A/" target="_blank" class="amazon-color badge badge-pill badge-info">
+									<a href="https://www.amazon.com/dp/B00ICN066A/" target="_blank" class="amazon-color badge badge-pill">
 										Amazon
 									</a>
 								</li>
 								<li>
 									Ishamel
-									<a href="https://medium.com/@nayakkayak16/camping-across-america-a40c43be248" target="_blank" class="amazon-color badge badge-pill badge-info">
+									<a href="https://www.amazon.com/dp/B000SEFH6A/" target="_blank" class="amazon-color badge badge-pill">
+										Amazon
+									</a>
+								</li>
+								<li>
+									Neuromancer
+									<a href="https://www.amazon.com/Neuromancer-Science-Fiction-William-Gibson-ebook/dp/B000O76ON6/" target="_blank" class="amazon-color badge badge-pill">
 										Amazon
 									</a>
 								</li>
 								<li>
 									History of Future Cities
-									<a href="https://www.amazon.com/History-Future-Cities-Daniel-Brook/dp/0393348865" target="_blank" class="amazon-color badge badge-pill badge-info">
+									<a href="https://www.amazon.com/History-Future-Cities-Daniel-Brook/dp/0393348865" target="_blank" class="amazon-color badge badge-pill">
 										Amazon
 									</a>
 								</li>
 							</ul>
 						</li>
-						<li class="list-header">
-							<h5><span class="oi oi-globe align-middle"></span>&nbsp;Travel</h5>
+						<li class="list-header fadein">
+							<h5><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;Travel</h5>
 							<ul class="list-unstyled">
 								<li>
 									Backpacking Southeast Asia
@@ -111,8 +120,8 @@
 								</li>
 							</ul>
 						</li>
-						<li class="list-header">
-							<h5><span class="oi oi-pencil align-middle"></span>&nbsp;Write</h5>
+						<li class="list-header fadein">
+							<h5><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Write</h5>
 							<ul class="list-unstyled">
 								<li>
 									<a href="https://hackernoon.com/to-big-company-or-to-small-company-that-is-the-question-5385d3ce38f9" target="_blank" class="">
@@ -127,14 +136,42 @@
 							</ul>
 						</li>
           </ul>
+					<hr class="fadein">
+					<ul class="list-inline social-icons fadein">
+						<li class="list-inline-item ">
+							<a href="https://www.facebook.com/aatish.nayak" target="_blank" class="fa fa-facebook"></a>
+						</li>
+						<li class="list-inline-item ">
+							<a class="fa fa-snapchat-ghost" data-toggle="modal" href="#snapchat"></a>
+
+						</li>
+						<li class="list-inline-item ">
+							<a href="https://twitter.com/nayakkayak" target="_blank" class="fa fa-twitter"></a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://linkedin.com/in/aatishn" target="_blank" class="fa fa-linkedin"></a>
+						</li>
+					</ul>
         </div>
       </div>
+			<div class="modal fade" id="snapchat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-reference">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
     </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="js/libs/bootstrap.min.js"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/typeit@4.4.1/dist/typeit.min.js"></script>
 		<script>
@@ -147,7 +184,7 @@
 					})
 			});
 			var nextTyped = function(){
-				var listElts = $('.list-header')
+				var listElts = $('.fadein')
 				console.log(listElts);
 				for (var i = 0; i < listElts.length; i++) {
 					$(listElts[i]).fadeIn((i+1) * 500)
