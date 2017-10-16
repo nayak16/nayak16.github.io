@@ -43,9 +43,10 @@
         <div class="col-lg-5">
           <h1 id="typed-name" class="mt-5"></h1>
           <p class=""><span class="oi oi-map-marker align-middle" title="map-marker" aria-hidden="true"></span>&nbsp;Los Angeles, CA</p>
+					<hr>
           <ul class="list-unstyled">
             <li class="list-header">
-							<h5>What I do</h5>
+							<h5><span class="oi oi-monitor align-middle"></span>&nbsp;Learn</h5>
 							<ul class="list-unstyled">
 								<li>Currently, Software Engineer at
 									<a href="http://skurt.com" target="_blank" class="skurt-color badge badge-pill badge-info">Skurt</a>
@@ -64,7 +65,54 @@
 							</ul>
 						</li>
 						<li class="list-header">
-							<h5>What I Write</h5>
+							<h5><span class="oi oi-book align-middle"></span>&nbsp;Read</h5>
+							<ul class="list-unstyled">
+								<li>
+									Sapiens
+									<a href="https://www.amazon.com/dp/B00ICN066A/" target="_blank" class="amazon-color badge badge-pill badge-info">
+										Amazon
+									</a>
+								</li>
+								<li>
+									Ishamel
+									<a href="https://medium.com/@nayakkayak16/camping-across-america-a40c43be248" target="_blank" class="amazon-color badge badge-pill badge-info">
+										Amazon
+									</a>
+								</li>
+								<li>
+									History of Future Cities
+									<a href="https://www.amazon.com/History-Future-Cities-Daniel-Brook/dp/0393348865" target="_blank" class="amazon-color badge badge-pill badge-info">
+										Amazon
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="list-header">
+							<h5><span class="oi oi-globe align-middle"></span>&nbsp;Travel</h5>
+							<ul class="list-unstyled">
+								<li>
+									Backpacking Southeast Asia
+									<a href="https://www.instagram.com/p/BWAu0ekHebk/" target="_blank" class="badge badge-pill instagram-color">
+										Instagram
+									</a>
+								</li>
+								<li>
+									Wandering Western Europe
+									<a href="https://www.instagram.com/p/BWilTtVH9Wq/" target="_blank" class="badge badge-pill instagram-color">
+										Instagram
+									</a>
+								</li>
+								<li>
+									Roadtripping Southwest America
+									<a href="https://www.instagram.com/p/BSM-FIaln50" target="_blank" class="badge badge-pill instagram-color">
+										Instagram
+									</a>
+
+								</li>
+							</ul>
+						</li>
+						<li class="list-header">
+							<h5><span class="oi oi-pencil align-middle"></span>&nbsp;Write</h5>
 							<ul class="list-unstyled">
 								<li>
 									<a href="https://hackernoon.com/to-big-company-or-to-small-company-that-is-the-question-5385d3ce38f9" target="_blank" class="">
@@ -76,8 +124,6 @@
 										Camping Across America
 									</a>
 								</li>
-
-
 							</ul>
 						</li>
           </ul>
@@ -97,10 +143,15 @@
 						strings: ["Atish Nayak", "Aatish Nayak"],
 						breakLines: false,
 						callback: nextTyped,
-						cursor: false
+						cursor: true
 					})
 			});
 			var nextTyped = function(){
+				var listElts = $('.list-header')
+				console.log(listElts);
+				for (var i = 0; i < listElts.length; i++) {
+					$(listElts[i]).fadeIn((i+1) * 500)
+				}
 			};
 		</script>
 

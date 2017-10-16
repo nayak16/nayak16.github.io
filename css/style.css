@@ -19,8 +19,9 @@ body {
 #typed-name {
   margin-left: -1.4rem;
 }
-
+/* ----------- List Sizing ------ */
 .list-header {
+  display: none;
   padding-top: 1rem;
 }
 
@@ -39,6 +40,20 @@ body {
 
 .autolab-color {
   background-color: #9F1F28;
+}
+
+.amazon-color {
+  background-color: #FF9900;
+  font-size: 70%;
+}
+
+.instagram-color {
+  background:
+
+   linear-gradient( #400080, transparent),
+
+ linear-gradient(
+   200deg, #d047d1, #ff0000,    #ffff00);
 }
 
 /* ------------------------------ */
