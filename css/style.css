@@ -3,6 +3,22 @@ body {
     width: 100%;
     height: 100%;
 }
+body {
+  padding-top: 3.5rem;
+}
+
+
+@media screen and (max-width: 992px) {
+  body {
+    padding-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    padding-top: 0rem;
+  }
+}
 
 /*body {
   background: url(../assets/bg.jpg) no-repeat center center fixed;
@@ -24,6 +40,11 @@ body {
   display: none;
 }
 
+.badge:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 /* ------- Snapcode Modal ------ */
 .snapcode {
   width: 100%;
@@ -32,6 +53,10 @@ body {
     -webkit-border-radius: 5.3rem !important;
     -moz-border-radius: 5.3rem !important;
     border-radius: 5.3rem !important;
+    padding: 0rem;
+}
+ #snapchat .modal-body {
+    padding: 0rem;
 }
 
 /* ----------- List Sizing ------ */
@@ -81,6 +106,7 @@ body {
   text-align: center;
   text-decoration: none;
   margin: 6px 0px;
+  border-radius: 8px;
 }
 
 .fa-facebook {
