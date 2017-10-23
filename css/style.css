@@ -140,3 +140,7 @@ body {
 }
 
 /* ------------------------------ */
+
+.insta-modal .modal-body {
+  padding: 0px;
+}
