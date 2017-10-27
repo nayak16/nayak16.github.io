@@ -45,6 +45,10 @@ body {
   text-decoration: underline;
 }
 
+h5 {
+  font-weight: bold;
+}
+
 /* ------- Snapcode Modal ------ */
 .snapcode {
   width: 100%;
@@ -107,6 +111,10 @@ body {
   text-decoration: none;
   margin: 6px 0px;
   border-radius: 8px;
+}
+
+.social-icons a:hover {
+  color: white;
 }
 
 .fa-facebook {
