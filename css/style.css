@@ -47,6 +47,19 @@ body {
 
 h5 {
   font-weight: bold;
+  font-size: 1.25rem;
+}
+li {
+  font-size: 1rem;
+}
+@media screen and (max-width: 650px) {
+  li {
+    font-size: 0.9rem;
+  }
+  h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 }
 
 /* ------- Snapcode Modal ------ */
