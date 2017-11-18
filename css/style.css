@@ -57,9 +57,9 @@ li {
     font-size: 0.9rem;
   }
   h5 {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
 }
 
 /* ------- Snapcode Modal ------ */
@@ -158,6 +158,10 @@ li {
 
 .fa-instagram {
   color: white;
+}
+.fa-get-pocket {
+  color: white;
+  background-color: #D33A4E;
 }
 
 /* ------------------------------ */

@@ -36,7 +36,7 @@
         <div class="col-lg-5">
           <h1 id="typed-name" class="mt-5"></h1>
           <p class=""><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Los Angeles, CA</p>
-					<hr>
+		  <hr>
           <ul class="list-unstyled">
             <li class="list-header-first fadein">
 				<h5><i class="fa fa-laptop" aria-hidden="true"></i>&nbsp;Learn</h5>
@@ -67,14 +67,8 @@
 						</a>
 					</li>
 					<li>
-						Ishmael
-						<a href="https://www.amazon.com/dp/B000SEFH6A/" target="_blank" class="amazon-color badge badge-pill">
-							Amazon
-						</a>
-					</li>
-					<li>
-						Neuromancer
-						<a href="https://www.amazon.com/Neuromancer-Science-Fiction-William-Gibson-ebook/dp/B000O76ON6/" target="_blank" class="amazon-color badge badge-pill">
+						Ego is the Enemy
+						<a href="https://www.amazon.com/dp/B015NTIXWE/" target="_blank" class="amazon-color badge badge-pill">
 							Amazon
 						</a>
 					</li>
@@ -85,9 +79,34 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short" target="_blank" class="">
-							The days are long but the decades are short
+						<a data-toggle='modal' href="#readings-modal">
+							more...
 						</a>
+						<div class="modal fade" id="readings-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content modal-reference">
+									<div class="modal-header">
+								        <h3 class="modal-title">Further Thoughts</h3>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								    </div>
+								    <div class="modal-body">
+										<div class="container">
+									      	<div class="row">
+										        <div class="col-lg-12">
+													<ul class="list-unstyled extra-readings">
+											            
+													</ul>
+												</div>
+										  	</div>
+										 </div>
+									</div>
+									<div class="modal-footer"></div>
+
+								</div>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -175,6 +194,9 @@
 				<li class="list-inline-item">
 					<a href="http://instagram.com/nayakkayak16" class="fa fa-instagram instagram-color" target="_blank"></a>
 				</li>
+				<li class="list-inline-item">
+					<a href="http://getpocket.com/@585Acg21dcp0GTk241p9dr0pS5TddP15b7cw59R769A903Y920GOub1bXc1WqO11" class="fa fa-get-pocket pocket-color" target="_blank"></a>
+				</li>
 				<li class="list-inline-item ">
 					<a class="fa fa-snapchat-ghost" data-toggle="modal" href="#snapchat"></a>
 					<div class="modal fade" id="snapchat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -195,22 +217,108 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/typeit@4.4.1/dist/typeit.min.js"></script>
 		<script>
+
 			$(function(){
 					$("#typed-name").typeIt({
 						strings: ["Atish Nayak", "Aatish Nayak"],
 						breakLines: false,
+						speed: 100,
+						startDelay: 100,
+						breakDelay: 200,
 						callback: fadeInContent,
 						cursor: true
 					})
 			});
 			var fadeInContent = function(){
 				var listElts = $('.fadein')
-				console.log(listElts);
 				for (var i = 0; i < listElts.length; i++) {
 					$(listElts[i]).fadeIn((i+1) * 500)
 				}
+				if (!String.prototype.format) {
+				  String.prototype.format = function() {
+				    var args = arguments;
+				    return this.replace(/{(\d+)}/g, function(match, number) { 
+				      return typeof args[number] != 'undefined'
+				        ? args[number]
+				        : match
+				      ;
+				    });
+				  };
+				}
+				var html = '';
+				var readings = {
+					"Autonomous Vehicles": {
+						"icon": "fa-car",
+						"links": [
+							{
+								"title": "Self Driving Car Race",
+								"link": "http://www.businessinsider.com/the-companies-most-likely-to-get-driverless-cars-on-the-road-first-2017-4"
+							},
+							{
+								"title": "Parking Space Usage in LA",
+								"link": "https://www.fastcompany.com/40441392/see-just-how-much-of-a-citys-land-is-used-for-parking-spaces"
+							},
+							{
+								"title": "a16z Overview of AVs",
+								"link": "https://a16z.com/2017/01/06/selfdriving-cars-frank-chen/"
+							}
+						]
+					},
+					"Life Decisions": {
+						"icon": "fa-life-ring",
+						"links": [
+							{
+								"title": "The days are long, but the decades are short",
+								"link": "http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short"
+							},
+							{
+								"title": "Religion for the Non-Religious",
+								"link": "https://waitbutwhy.com/2014/10/religion-for-the-nonreligious.html"
+							},
+							{
+								"title": "Brief History of Existential Terror",
+								"link": "https://www.ribbonfarm.com/2017/02/28/a-brief-history-of-existential-terror/"
+							}
+						]
+					},
+					"Career": {
+						"icon": "fa-black-tie",
+						"links": [
+							{
+								"title": "The Trouble with Optionality",
+								"link": "http://www.thecrimson.com/article/2017/5/25/desai-commencement-ed/#.WTg41k_m1zg.twitter"
+							},
+							{
+								"title": "Dropbox CEO MIT Commencement",
+								"link": "https://medium.com/@drewhouston/finding-your-tennis-ball-2013-mit-commencement-address-20fbd04e573f#.rg9mp9qdz"
+							},
+							{
+								"title": "Why Procrastinators Procrastinate",
+								"link": "https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html"
+							}
+						]
+					}
+				}
+				var first = true;
+				for (var key in readings) {
+					var props = readings[key];
+					if (first) {
+						html +="<li class=\"list-header-first\">"
+						first = false;
+					} else {
+						html +="<li class=\"list-header\">"
+					}
+					html += "<h5><i class='fa {0}' aria-hidden='true'></i>&nbsp;{1}</h5>".format(props['icon'], key)
+					html += "<ul class='list-unstyled'>"
+					for (var i = 0; i < props['links'].length; i++) {
+						var link = props['links'][i];
+						html += "<li><a href='{0}' target='_blank'>{1}</a></li>".format(link["link"], link["title"])
+					}
+					html += "</ul></li>"
+				}
+				$('.extra-readings').append(html)
 			};
-			fadeInContent()
+			//fadeInContent()
 		</script>
 		<!-- Google Analytics -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
